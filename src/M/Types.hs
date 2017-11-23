@@ -23,6 +23,9 @@ data Restaurant = Restaurant
 data NoMenu
   = NoLunch
   | SomethingWrong
+  | DecodeError String -- ^ The decoding went boom. Ooops.
+  | ParseError String -- ^ The parsing went boom. Ooops.
+  | HttpFail String -- ^ The downloading failed.
   deriving (Eq, Show)
 
 -- | Menu of a restaurant.

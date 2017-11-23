@@ -55,6 +55,7 @@ library
 
   build-depends: aeson
                , base >=4.7
+               , bytestring
                , css-text
                , http-conduit
                , lens

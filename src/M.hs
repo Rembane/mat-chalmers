@@ -43,6 +43,7 @@ update c = do
           else ("Today", dateNow)
   let day = date ^. _localDay
   let weekday = (date ^. (_localDay . mondayWeek . _mwDay)) - 1
+      -- TODO: partitionEithers
   rest <-
     sequence
       [ getKaren day "K\229rrestaurangen" karen johannebergLunch
